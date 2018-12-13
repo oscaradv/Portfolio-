@@ -4,20 +4,11 @@ $(window).on("load", function() {
         $(".loader").fadeOut(750);
     });
     
-     $(".items").isotope({
-       filter: '*', 
-        animationOptions: {
-         duration: 1500,
-         easing: 'linear',
-         queue: false
-        }
-    });
 })
 
 
 
-
-
+    
 $(document).ready(function() {
     
     $('#slides').superslides({
@@ -54,24 +45,14 @@ $('.owl-carousel').owlCarousel({
  });
     
 
-    $('.chart').easyPieChart({
-        easing: 'easeInOut',
-        barColor: '#fff',
-        trackColor: 'white',
-        scaleColor: false,
-        lineWidth: 4,
-        size: 152,
-        onStep: function(from, to, percent) {
-            $(this.el).find('.percent').text(Math.round(percent));
-        }
-        
-        });
+    
   
+    
        var skillsTopOffset = $(".skillsSection").offset().top;
        var statsTopOffset = $(".statsSection").offset().top;
        var countUpFinished = false;
-    
-    $(window).scroll(function() {
+       $(window).scroll(function() {
+           
         if(window.pageYOffset > skillsTopOffset - $(window).height() + 200){
             
             $('.chart').easyPieChart({
@@ -86,7 +67,9 @@ $('.owl-carousel').owlCarousel({
         } 
             
         });
+            
      }
+           
         
     if(!countUpFinished && window.pageYOffset > statsTopOffset - $(window).height() + 200) { 
          $(".counter").each(function() {
@@ -97,12 +80,24 @@ $('.owl-carousel').owlCarousel({
     })
         
         countUpFinished = true;
+        
     }
+           
         
     });
     
+    
    $("[data-fancybox]").fancybox();
-   
+    
+    
+      $(".items").isotope({
+       filter: '*', 
+        animationOptions: {
+         duration: 1500,
+         easing: 'linear',
+         queue: false
+        }
+    });
        
    $("#filters a").click(function() {
        $("#filters .current").removeClass("current");
@@ -116,6 +111,7 @@ $('.owl-carousel').owlCarousel({
          duration: 1500,
          easing: 'linear',
          queue: false
+            
         }
    });
        
@@ -130,7 +126,9 @@ $('.owl-carousel').owlCarousel({
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
         $("html, body").animate({ scrollTop: targetPosition - 50}, "slow")
+        
     });
+    
     
     
     
@@ -149,9 +147,12 @@ $('.owl-carousel').owlCarousel({
         }
         else {
             body.css("padding-top", 0);
-            body.removeClass("fixedNav");
-            
+            body.removeClass("fixedNav");            
         }
+        
+        
+        
+        
     }
     
 });

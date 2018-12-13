@@ -130,7 +130,7 @@ body {
 
 .squareInnerContainer:before, 
 .squareInnerContainer:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0px;
     width: 30%;
@@ -139,10 +139,10 @@ body {
     
 }
 
-squareInnerContainer:before {
+.squareInnerContainer:before {
   right: 0px;  
 }
-squareInnerContainer:after {
+.squareInnerContainer:after {
   left: 0px; 
 }
 
@@ -161,12 +161,12 @@ squareInnerContainer:after {
   
 .squareIcon {
     position: absolute;
-    left: 50px;
+    left: 50%;
     top: -30px;
-    width: 40px;
+    width: 40%;
     height: 60px;
     font-size: 45px;
-    margin-left: -20px;
+    margin-left: -20%;
     color: #444;
 }
 
