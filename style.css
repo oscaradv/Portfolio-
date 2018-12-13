@@ -75,6 +75,10 @@ body {
     max-width: 100%
 }
 
+.col-md-7 h4 {
+    color: #074D0F;
+}
+
 .skillsSection,
 .contactSection {
   background-color:  #27ae60;
@@ -330,7 +334,7 @@ copyrightSection p {
 }
 
 #navigation {
-  background-color: #e74c3c;
+  background-color: #27ae60;
     padding: 20px 10px;
     z-index: 100;
     width: 100%;
